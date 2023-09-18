@@ -1,0 +1,39 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  &__slide {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-reverse {
+      flex-direction: row-reverse;
+    }
+    &__leftCol {
+      max-width: 582px;
+      &__title {
+        font-family: Gotham Pro;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        color: $black;
+      }
+      &__text {
+        font-family: Inter;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        color: $text-primary;
+        ul {
+          padding-left: 17px;
+        }
+        p {
+          margin: 17px 0 10px 0;
+        }
+      }
+    }
+  }
+}

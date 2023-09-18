@@ -1,0 +1,42 @@
+.accordions {
+  margin-top: 20px;
+  width: 100%;
+  &__title {
+    font-family: Gotham Pro;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    color: $black;
+    margin-bottom: 34px;
+    cursor: pointer;
+  }
+  &__item {
+    width: 100%;
+    padding: 15px 0;
+    border-bottom: 1px solid $dark-gray;
+    &__title {
+      width: 100%;
+      font-family: Gotham Pro;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%;
+      color: $black;
+      margin: 0;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    &__text {
+      font-family: Inter;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      color: $text-primary;
+      max-width: 815px;
+    }
+  }
+}

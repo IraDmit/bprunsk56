@@ -1,0 +1,80 @@
+.filter {
+  display: flex;
+  gap: 10px;
+  &__selected,
+  &__input {
+    border-radius: 6px;
+    border: 2px solid $input-border;
+    background-color: $white;
+  }
+  &__selected {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px;
+    cursor: pointer;
+    color: $placeholder-text;
+    font-family: Gotham Pro;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  &__input {
+    padding: 14px 14px 14px 12px;
+    outline: none;
+    &::placeholder {
+      font-family: Gotham Pro;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+    }
+    &-big {
+      max-width: 405px;
+      width: 100%;
+    }
+    &-right {
+      max-width: 120px;
+      width: 100%;
+      &::placeholder {
+        text-indent: calc(100% - 14px);
+      }
+    }
+  }
+  &__select {
+    max-width: 172px;
+    width: 100%;
+    position: relative;
+  }
+  &__options {
+    position: absolute;
+    transform: translateY(5px);
+    left: 0;
+    border-radius: 6px;
+    border: 1px solid #2787f5;
+    background-color: $white;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    cursor: pointer;
+    &__item {
+      padding: 12px 14px 13px 14px;
+      cursor: pointer;
+    }
+    &.open {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  &__btn {
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-btn;
+    color: $white;
+    padding: 14px 42px;
+    margin-left: 50px;
+  }
+}

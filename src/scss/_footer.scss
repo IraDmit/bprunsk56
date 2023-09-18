@@ -1,0 +1,60 @@
+footer {
+  background-color: $dark-gray;
+  padding: 21px 0px;
+  margin-top: 82px;
+  .container {
+    display: flex;
+    align-items: center;
+    .logo-footer {
+      display: flex;
+      flex-direction: column;
+      max-width: 174px;
+      width: 100%;
+      &__image {
+        margin-bottom: 5px;
+        width: 171px;
+      }
+      &__text {
+        text-align: center;
+        font-family: Open Sans;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        color: $white;
+      }
+      &__policy {
+        text-align: center;
+        font-family: Open Sans;
+        font-size: 8px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        color: $white;
+      }
+    }
+    .social {
+      display: flex;
+      gap: 44px;
+      margin-left: 66px;
+      &__item {
+        &__text {
+          font-family: Gotham Pro;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%;
+          color: $text-footer;
+        }
+        &__contact {
+          font-family: Gotham Pro;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%;
+          color: $white;
+        }
+      }
+    }
+  }
+}

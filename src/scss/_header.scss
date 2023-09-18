@@ -1,0 +1,28 @@
+header {
+  height: 80px;
+  background-color: $white;
+  box-shadow: 0px 4px 13px 0px rgba(0, 0, 0, 0.04);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 171px;
+    &__img {
+      width: 100%;
+      height: 19px;
+    }
+    &__text {
+      text-align: center;
+      font-family: Gotham Pro;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%;
+      color: $main-blue;
+    }
+  }
+}
