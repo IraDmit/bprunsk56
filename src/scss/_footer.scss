@@ -1,7 +1,7 @@
 footer {
   background-color: $dark-gray;
   padding: 21px 0px;
-  margin-top: 82px;
+  margin-top: 40px;
   .container {
     display: flex;
     align-items: center;
@@ -54,6 +54,21 @@ footer {
           line-height: 120%;
           color: $white;
         }
+      }
+    }
+  }
+  @media (max-width: 490px) {
+    .container {
+      flex-direction: column;
+      align-items: unset;
+      .logo-footer {
+        margin-bottom: 15px;
+        align-self: center;
+      }
+      .social {
+        justify-content: space-between;
+        margin-left: 0;
+        margin-bottom: 6px;
       }
     }
   }

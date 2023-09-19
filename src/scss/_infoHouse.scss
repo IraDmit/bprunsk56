@@ -1,0 +1,50 @@
+h3 {
+  margin: 0;
+}
+
+.info-house {
+  border-radius: 6px;
+  background-color: $white;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 18px 43px 58px 27px;
+  margin-right: auto;
+  max-width: 515px;
+  width: 100%;
+  &__title {
+    font-family: Open Sans;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    color: $text-primary;
+  }
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      &__type {
+        font-family: Open Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        color: $text-primary;
+      }
+      &__text {
+        color: $text-primary;
+        font-family: Open Sans;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+  }
+}

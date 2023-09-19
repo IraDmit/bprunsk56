@@ -1,17 +1,30 @@
 @import "varAndMixin.scss";
 @import "fonts";
+
 @import "header";
+@import "footer";
+
+//main page
 @import "filterSection";
 @import "cards";
 @import "advantages";
 @import "accordions";
-@import "footer";
+
+//filter page
+@import "menu";
+@import "priceList";
+@import "addressTable";
+@import "infoHouse";
 
 .container {
   padding: 0 30px;
   max-width: 1203px;
-  margin-right: auto;
+  margin: 0 auto;
   width: 100%;
+  @media (max-width: 1440px) {
+    margin: 0;
+    margin-right: auto;
+  }
   @media (max-width: 768px) {
     padding: 0 15px;
   }
@@ -45,7 +58,7 @@ h1 {
   line-height: 120%;
   color: $text-title;
   max-width: 582px;
-  margin: 122px 0 62px 0;
+  margin: 122px 0 2px 0;
 }
 
 img {

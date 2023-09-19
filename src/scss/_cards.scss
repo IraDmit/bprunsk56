@@ -1,7 +1,7 @@
 .cards {
   margin: 148px 0 62px 0;
   display: grid;
-  grid-template-columns: repeat(4, 290px);
+  grid-template-columns: repeat(4, 1fr);
   gap: 12px;
   &__item {
     border-radius: 6px;
@@ -26,5 +26,13 @@
       line-height: normal;
       color: $text-primary;
     }
+  }
+  @media (max-width: 940px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  @media (max-width: 475px) {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: none;
   }
 }

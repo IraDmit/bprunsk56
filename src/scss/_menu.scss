@@ -1,0 +1,21 @@
+.menu {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  border-bottom: 1px solid $menu-border;
+  padding: 9px;
+  margin-bottom: 30px;
+  &__item {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: $text-primary;
+    cursor: pointer;
+    &.active {
+      color: $menu-active;
+      border-bottom: 2px solid $menu-active;
+    }
+  }
+}
