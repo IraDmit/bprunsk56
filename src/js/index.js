@@ -1,7 +1,4 @@
 window.addEventListener("DOMContentLoaded", () => {
-  const accordionsTrigger = Array.from(
-    document.querySelectorAll(".accordions__item__title")
-  );
   try {
     document.querySelectorAll(".accordions__item__title").forEach((el) => {
       el.addEventListener("click", ({ target }) => {
@@ -33,14 +30,19 @@ window.addEventListener("DOMContentLoaded", () => {
 
   const menu = document.querySelector(".menu");
 
-  menu.addEventListener("click", ({ target }) => {
-    document.querySelectorAll(".menu__item").forEach((el) => {
-      if (el.classList.contains("active")) {
-        el.classList.remove("active");
-      }
+  try {
+    menu.addEventListener("click", ({ target }) => {
+      document.querySelectorAll(".menu__item").forEach((el) => {
+        if (el.classList.contains("active")) {
+          el.classList.remove("active");
+        }
+      });
+      if (target.classList.contains("menu__item"))
+        target.classList.add("active");
     });
-    if (target.classList.contains("menu__item")) target.classList.add("active");
-  });
+  } catch (error) {
+    console.warn(error);
+  }
 
   const slideUp = (target, duration = 500) => {
     if (!target.nextElementSibling.classList.contains("_slide")) {

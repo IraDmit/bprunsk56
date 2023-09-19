@@ -4,6 +4,7 @@ const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser"); // Для минификации JS
+var ghPages = require("gulp-gh-pages");
 
 const browserSync = require("browser-sync").create();
 
@@ -61,6 +62,10 @@ function fonts() {
 }
 
 const buildTasks = gulp.parallel(styles, html, scripts, images, fonts);
+
+gulp.task("deploy", function () {
+  return gulp.src("./dist/**/*").pipe(ghPages());
+});
 
 exports.watch = gulp.series(buildTasks, watchFiles);
 exports.build = buildTasks;
