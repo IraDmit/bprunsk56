@@ -24,5 +24,8 @@ header {
       line-height: 130%;
       color: $main-blue;
     }
+    @media (max-width: 375px) {
+      margin: 0 auto;
+    }
   }
 }

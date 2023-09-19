@@ -27,6 +27,7 @@
     justify-content: flex-end;
     width: 100%;
     gap: 20px;
+    margin-top: 10px;
     &__toogle {
       display: flex;
       &__btn {
@@ -47,6 +48,23 @@
           background-color: $table-blue;
           color: $white;
         }
+      }
+    }
+    &__selects {
+      display: flex;
+      gap: 20px;
+    }
+    @media (max-width: 520px) {
+      justify-content: center;
+      flex-wrap: wrap;
+      &__toogle {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      &__selects {
+        width: 100%;
+        justify-content: space-between;
       }
     }
   }
@@ -79,6 +97,69 @@
         }
       }
     }
+    @media (max-width: 850px) {
+      display: none;
+    }
+  }
+  &__table-mobile {
+    display: flex;
+    flex-direction: column;
+    display: none;
+    margin-top: 17px;
+    &__row {
+      display: flex;
+      justify-content: space-between;
+      color: $text-primary;
+      border-top: 1px solid $text-footer;
+      border-bottom: 1px solid $text-footer;
+      margin-top: -1px;
+      padding: 10px 0;
+      &__text {
+        font-family: Open Sans;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        &-fat {
+          font-family: Open Sans;
+          font-size: 10px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+      &__leftCol {
+        &__title {
+          font-family: Open Sans;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+        }
+      }
+      &__rightCol {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        &__price {
+          font-family: Open Sans;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+        &__price-range {
+          font-family: Open Sans;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+    }
+    @media (max-width: 850px) {
+      display: flex;
+    }
   }
   &__pagination {
     display: flex;
@@ -97,6 +178,30 @@
     &__dots {
       display: flex;
       gap: 50px;
+    }
+    @media (max-width: 850px) {
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+  &__pagination-mobile {
+    border-radius: 6px;
+    border: 1px solid $text-title;
+    padding: 9px 26px;
+    text-align: center;
+    margin: 0 auto;
+    max-width: 140px;
+    opacity: 0;
+    visibility: hidden;
+    font-family: Open Sans;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 20px;
+    color: $blue;
+    @media (max-width: 850px) {
+      opacity: 1;
+      visibility: visible;
     }
   }
 }

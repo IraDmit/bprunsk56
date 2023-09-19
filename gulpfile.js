@@ -3,6 +3,7 @@ const sass = require("gulp-sass")(require("sass"));
 const cleanCSS = require("gulp-clean-css");
 const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
+const terser = require("gulp-terser"); // Для минификации JS
 
 const browserSync = require("browser-sync").create();
 
@@ -14,7 +15,7 @@ function styles() {
     .pipe(cleanCSS({ compatibility: "ie8" }))
     .pipe(rename({ suffix: ".min" }))
     .pipe(gulp.dest("./dist/css"))
-    .pipe(browserSync.stream()); // автообновление стилей
+    .pipe(browserSync.stream());
 }
 
 // Минификация HTML
@@ -23,7 +24,17 @@ function html() {
     .src("./src/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("./dist"))
-    .on("end", browserSync.reload); // автообновление HTML
+    .on("end", browserSync.reload);
+}
+
+// Минификация JS
+function scripts() {
+  return gulp
+    .src("./src/js/*.js")
+    .pipe(terser())
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(gulp.dest("./dist/js"))
+    .pipe(browserSync.stream());
 }
 
 // Отслеживание изменений
@@ -34,15 +45,23 @@ function watchFiles() {
     },
   });
 
-  gulp.watch("./src/scss/**/*.scss", styles);
+  gulp.watch("./src/scss/*.scss", styles);
   gulp.watch("./src/*.html", html);
-  gulp.watch("./src/images/**/*", images)
+  gulp.watch("./src/js/*.js", scripts);
+  gulp.watch("./src/images/**/*", images);
 }
 
+// Оптимизация и перенос изображений
 function images() {
   return gulp.src("./src/images/**/*").pipe(gulp.dest("./dist/images"));
 }
 
-exports.watch = watchFiles;
-exports.build = gulp.parallel(styles, html, images);
-exports.default = gulp.series(gulp.parallel(styles, html, images), watchFiles);
+function fonts() {
+  return gulp.src("./src/fonts/**/*").pipe(gulp.dest("./dist/fonts"));
+}
+
+const buildTasks = gulp.parallel(styles, html, scripts, images, fonts);
+
+exports.watch = gulp.series(buildTasks, watchFiles);
+exports.build = buildTasks;
+exports.default = exports.watch;

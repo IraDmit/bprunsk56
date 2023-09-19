@@ -20,3 +20,15 @@ $price-list-text: #969696;
 $price-list-price: #585858;
 $price-list-range: #888888;
 $table-blue: #4da1ff;
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.eot") format("eot"),
+      url("../fonts/#{$file_name}.ttf") format("ttf"),
+      url("../fonts/#{$file_name}.woff") format("woff");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}

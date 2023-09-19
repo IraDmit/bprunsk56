@@ -1,7 +1,8 @@
 .accordions {
   margin-top: 20px;
   width: 100%;
-  margin-bottom: 40px &__title {
+  margin-bottom: 40px;
+  &__title {
     font-family: Gotham Pro;
     font-size: 24px;
     font-style: normal;
@@ -9,13 +10,15 @@
     line-height: 120%;
     color: $black;
     margin-bottom: 34px;
-    cursor: pointer;
   }
   &__item {
     width: 100%;
     padding: 15px 0;
     border-bottom: 1px solid $dark-gray;
+    cursor: pointer;
+    transition: 0.5s;
     &__title {
+      transition: 0.4s;
       width: 100%;
       font-family: Gotham Pro;
       font-size: 18px;
@@ -24,10 +27,17 @@
       line-height: 120%;
       color: $black;
       margin: 0;
-      margin-bottom: 20px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      img {
+        transition: 0.5s;
+      }
+      &.active {
+        img {
+          transform: rotate(-180deg);
+        }
+      }
     }
     &__text {
       font-family: Inter;
@@ -37,6 +47,11 @@
       line-height: normal;
       color: $text-primary;
       max-width: 815px;
+      // visibility: hidden;
+      // display: none;
+      // overflow: hidden;
+      // max-height: 0;
+      // transition: max-height 0.2s ease-out;
     }
   }
 }

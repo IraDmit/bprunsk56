@@ -32,7 +32,7 @@
       <section class="filter">
         <div class="filter__select">
           <div class="filter__selected">
-            Квартира
+            <span> Квартира </span>
             <img
               src="./images/select-down.svg"
               alt="./images/select-down.svg"
@@ -45,7 +45,7 @@
         </div>
         <div class="filter__select">
           <div class="filter__selected">
-            Кол-во комнат
+            <span> Кол-во комнат </span>
             <img
               src="./images/select-down.svg"
               alt="./images/select-down.svg"
@@ -67,7 +67,7 @@
       </section>
 
       <section class="menu">
-        <div class="menu__item">Сводка</div>
+        <div class="menu__item active">Сводка</div>
         <div class="menu__item">О доме</div>
         <div class="menu__item">Стоимость помещений</div>
         <div class="menu__item">Арендная ставка</div>
@@ -165,6 +165,72 @@
             <div class="address-table__table__row__column">13.01.2023</div>
           </div>
         </div>
+
+        <div class="address-table__table-mobile">
+          <div class="address-table__table-mobile__row">
+            <div class="address-table__table-mobile__row__leftCol">
+              <a
+                href="#"
+                class="address-table__table-mobile__row__leftCol__title"
+              >
+                41,2 м², 1-комн 1/23 этаж
+              </a>
+              <div class="address-table__table-mobile__row__text">
+                Новосибирск, ул. Николая Островского, 60
+                <br />
+                Кирпичный, 2020
+              </div>
+              <div class="address-table__table-mobile__row__text-fat">
+                СРЕДНЯЯ ОКУПАЕМОСТЬ - 7.8
+              </div>
+            </div>
+            <div class="address-table__table-mobile__row__rightCol">
+              <div class="address-table__table-mobile__row__rightCol__price">
+                10 000 000 ₽
+              </div>
+              <div
+                class="address-table__table-mobile__row__rightCol__price-range"
+              >
+                147 619 ₽/м²
+              </div>
+              <div class="address-table__table-mobile__row__text">
+                13.01.2023
+              </div>
+            </div>
+          </div>
+          <div class="address-table__table-mobile__row">
+            <div class="address-table__table-mobile__row__leftCol">
+              <a
+                href="#"
+                class="address-table__table-mobile__row__leftCol__title"
+              >
+                41,2 м², 1-комн 1/23 этаж
+              </a>
+              <div class="address-table__table-mobile__row__text">
+                Новосибирск, ул. Николая Островского, 60
+                <br />
+                Кирпичный, 2020
+              </div>
+              <div class="address-table__table-mobile__row__text-fat">
+                СРЕДНЯЯ ОКУПАЕМОСТЬ - 7.8
+              </div>
+            </div>
+            <div class="address-table__table-mobile__row__rightCol">
+              <div class="address-table__table-mobile__row__rightCol__price">
+                10 000 000 ₽
+              </div>
+              <div
+                class="address-table__table-mobile__row__rightCol__price-range"
+              >
+                147 619 ₽/м²
+              </div>
+              <div class="address-table__table-mobile__row__text">
+                13.01.2023
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="address-table__pagination">
           <div class="address-table__pagination__text">10 из 276</div>
           <div class="address-table__pagination__dots">
@@ -172,44 +238,53 @@
             <img src="./images/arrow-right.svg" alt="arrow-right" />
           </div>
         </div>
+
+        <div class="address-table__pagination-mobile">Загрузить еще</div>
       </section>
 
       <section class="address-table">
         <h4 class="address-table__title">
-          Мы провели оценку на основе этих квартир
+          Все объекты недвижимости по этому адресу
         </h4>
         <div class="address-table__text">
-          Для оценки подобрали объявления расположенные в этом здании и рядом с
-          тем же типом стен и годом постройки. Исключили объявления, которые
-          стоят слишком дорого или дешево.
+          Собрали все объявления, которые были по данному адресу. Их можно
+          сортировать по площади, типу помещения и типу объявления
         </div>
         <div class="address-table__btns">
           <div class="address-table__btns__toogle">
             <div class="address-table__btns__toogle__btn">Аренда</div>
             <div class="address-table__btns__toogle__btn">Продажа</div>
           </div>
-          <div class="filter__selected-gray">
-            Квартира
-            <img src="./images/select-down.svg" alt="select-down" />
-          </div>
-          <div class="filter__options">
-            <div class="filter__options__item">Жилая</div>
-            <div class="filter__options__item">Коммерческая</div>
-          </div>
-          <div class="filter__selected-gray">
-            30-55 м²
-            <img
-              src="./images/select-down.svg"
-              alt="./images/select-down.svg"
-            />
-          </div>
-          <div class="filter__options">
-            <div class="filter__options__item">до 8 м²</div>
-            <div class="filter__options__item">9-25 м²</div>
-            <div class="filter__options__item">18-35 м²</div>
-            <div class="filter__options__item">30-55 м²</div>
-            <div class="filter__options__item">50-120 м²</div>
-            <div class="filter__options__item">от 300 м²</div>
+          <div class="address-table__btns__selects">
+            <div class="filter__select">
+              <div class="filter__selected filter__selected-gray">
+                Квартира
+                <img src="./images/select-down.svg" alt="select-down" />
+              </div>
+              <div class="filter__options filter__options-gray">
+                <div class="filter__options__item filter__options__item-gray">
+                  Жилая
+                </div>
+                <div class="filter__options__item">Коммерческая</div>
+              </div>
+            </div>
+            <div class="filter__select">
+              <div class="filter__selected filter__selected-gray">
+                30-55 м²
+                <img
+                  src="./images/select-down.svg"
+                  alt="./images/select-down.svg"
+                />
+              </div>
+              <div class="filter__options filter__options-gray">
+                <div class="filter__options__item">до 8 м²</div>
+                <div class="filter__options__item">9-25 м²</div>
+                <div class="filter__options__item">18-35 м²</div>
+                <div class="filter__options__item">30-55 м²</div>
+                <div class="filter__options__item">50-120 м²</div>
+                <div class="filter__options__item">от 300 м²</div>
+              </div>
+            </div>
           </div>
         </div>
         <div class="address-table__table">
@@ -255,6 +330,72 @@
             <div class="address-table__table__row__column">13.01.2023</div>
           </div>
         </div>
+
+        <div class="address-table__table-mobile">
+          <div class="address-table__table-mobile__row">
+            <div class="address-table__table-mobile__row__leftCol">
+              <a
+                href="#"
+                class="address-table__table-mobile__row__leftCol__title"
+              >
+                41,2 м², 1-комн 1/23 этаж
+              </a>
+              <div class="address-table__table-mobile__row__text">
+                Новосибирск, ул. Николая Островского, 60
+                <br />
+                Кирпичный, 2020
+              </div>
+              <div class="address-table__table-mobile__row__text-fat">
+                СРЕДНЯЯ ОКУПАЕМОСТЬ - 7.8
+              </div>
+            </div>
+            <div class="address-table__table-mobile__row__rightCol">
+              <div class="address-table__table-mobile__row__rightCol__price">
+                10 000 000 ₽
+              </div>
+              <div
+                class="address-table__table-mobile__row__rightCol__price-range"
+              >
+                147 619 ₽/м²
+              </div>
+              <div class="address-table__table-mobile__row__text">
+                13.01.2023
+              </div>
+            </div>
+          </div>
+          <div class="address-table__table-mobile__row">
+            <div class="address-table__table-mobile__row__leftCol">
+              <a
+                href="#"
+                class="address-table__table-mobile__row__leftCol__title"
+              >
+                41,2 м², 1-комн 1/23 этаж
+              </a>
+              <div class="address-table__table-mobile__row__text">
+                Новосибирск, ул. Николая Островского, 60
+                <br />
+                Кирпичный, 2020
+              </div>
+              <div class="address-table__table-mobile__row__text-fat">
+                СРЕДНЯЯ ОКУПАЕМОСТЬ - 7.8
+              </div>
+            </div>
+            <div class="address-table__table-mobile__row__rightCol">
+              <div class="address-table__table-mobile__row__rightCol__price">
+                10 000 000 ₽
+              </div>
+              <div
+                class="address-table__table-mobile__row__rightCol__price-range"
+              >
+                147 619 ₽/м²
+              </div>
+              <div class="address-table__table-mobile__row__text">
+                13.01.2023
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div class="address-table__pagination">
           <div class="address-table__pagination__text">10 из 276</div>
           <div class="address-table__pagination__dots">
@@ -262,6 +403,8 @@
             <img src="./images/arrow-right.svg" alt="arrow-right" />
           </div>
         </div>
+
+        <div class="address-table__pagination-mobile">Загрузить еще</div>
       </section>
 
       <section class="info-house">
@@ -344,5 +487,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/index.min.js"></script>
   </body>
 </html>

@@ -6,7 +6,9 @@ p {
   display: flex;
   gap: 19px;
   margin: 20px 0;
-
+  overflow-x: auto;
+  white-space: nowrap;
+  
   &__item {
     border-radius: 6px;
     background-color: $white;
