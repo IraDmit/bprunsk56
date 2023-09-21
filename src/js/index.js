@@ -10,20 +10,33 @@ window.addEventListener("DOMContentLoaded", () => {
   }
 
   try {
+    const optionsClose = () => {
+      let options = document.querySelectorAll(".filter__options");
+      options.forEach((element) => {
+        element.classList.remove("open");
+      });
+    };
     document.addEventListener("click", ({ target }) => {
       if (target.classList.contains("filter__selected")) {
         target.nextElementSibling.classList.toggle("open");
       } else if (target.classList.contains("filter__options__item")) {
         let text = target.textContent;
         target.parentNode.previousElementSibling.children[0].innerText = text;
+        optionsClose();
       } else if (
         !target.classList.contains("filter__selected") &&
-        !target.classList.contains("filter__options__item")
+        !target.classList.contains("filter__options__item") &&
+        !target.classList.contains("address-table__btns__toogle__btn")
       ) {
-        let options = document.querySelectorAll(".filter__options");
-        options.forEach((element) => {
-          element.classList.remove("open");
+        optionsClose();
+      } else if (
+        target.classList.contains("address-table__btns__toogle__btn")
+      ) {
+        const targetParentChildren = Array.from(target.parentNode.children);
+        targetParentChildren.forEach((el) => {
+          el.classList.remove("active");
         });
+        target.classList.add("active");
       }
     });
   } catch (error) {}

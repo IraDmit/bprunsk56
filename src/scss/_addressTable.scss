@@ -43,8 +43,11 @@
         padding: 11px 25px;
         border: 1px solid $table-blue;
         color: $table-blue;
+        cursor: pointer;
         &:last-of-type {
           border-radius: 0px 5px 5px 0px;
+        }
+        &.active {
           background-color: $table-blue;
           color: $white;
         }

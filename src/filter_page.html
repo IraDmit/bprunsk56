@@ -33,10 +33,6 @@
         <div class="filter__select">
           <div class="filter__selected">
             <span> Квартира </span>
-            <img
-              src="./images/select-down.svg"
-              alt="./images/select-down.svg"
-            />
           </div>
           <div class="filter__options">
             <div class="filter__options__item">Жилая</div>
@@ -45,16 +41,12 @@
         </div>
         <div class="filter__select">
           <div class="filter__selected">
-            <span> Кол-во комнат </span>
-            <img
-              src="./images/select-down.svg"
-              alt="./images/select-down.svg"
-            />
+            <span> Тип </span>
           </div>
           <div class="filter__options">
-            <div class="filter__options__item">1</div>
-            <div class="filter__options__item">2</div>
-            <div class="filter__options__item">3</div>
+            <div class="filter__options__item">Торговое</div>
+            <div class="filter__options__item">Офисное</div>
+            <div class="filter__options__item">Складское</div>
           </div>
         </div>
         <input
@@ -118,7 +110,7 @@
         </div>
         <div class="address-table__btns">
           <div class="address-table__btns__toogle">
-            <div class="address-table__btns__toogle__btn">Аренда</div>
+            <div class="address-table__btns__toogle__btn active">Аренда</div>
             <div class="address-table__btns__toogle__btn">Продажа</div>
           </div>
         </div>
@@ -252,15 +244,12 @@
         </div>
         <div class="address-table__btns">
           <div class="address-table__btns__toogle">
-            <div class="address-table__btns__toogle__btn">Аренда</div>
+            <div class="address-table__btns__toogle__btn active">Аренда</div>
             <div class="address-table__btns__toogle__btn">Продажа</div>
           </div>
           <div class="address-table__btns__selects">
-            <div class="filter__select">
-              <div class="filter__selected filter__selected-gray">
-                Квартира
-                <img src="./images/select-down.svg" alt="select-down" />
-              </div>
+            <div class="filter__select filter__select-gray">
+              <div class="filter__selected filter__selected-gray"><span>Квартира</span></div>
               <div class="filter__options filter__options-gray">
                 <div class="filter__options__item filter__options__item-gray">
                   Жилая
@@ -273,10 +262,6 @@
                 class="filter__selected filter__selected-gray filter__selected-gray-select"
               >
                 <span>30-55 м <sup>2</sup></span>
-                <img
-                  src="./images/select-down.svg"
-                  alt="./images/select-down.svg"
-                />
               </div>
               <div class="filter__options filter__options-gray">
                 <div class="filter__options__item">до 8 м²</div>
@@ -480,11 +465,15 @@
         <div class="social">
           <div class="social__item">
             <div class="social__item__text">ДЛЯ СВЯЗИ</div>
-            <div class="social__item__contact">+73832999244</div>
+            <a href="tel:+73832999244" class="social__item__contact"
+              >+73832999244</a
+            >
           </div>
           <div class="social__item">
             <div class="social__item__text">ПОЧТА</div>
-            <div class="social__item__contact">+73832999244</div>
+            <a href="mailto:mail@mail.ru" class="social__item__contact"
+              >mail@mail.ru</a
+            >
           </div>
         </div>
       </div>

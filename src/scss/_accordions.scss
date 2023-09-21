@@ -10,6 +10,7 @@
     line-height: 120%;
     color: $black;
     margin-bottom: 34px;
+    
   }
   &__item {
     width: 100%;
@@ -32,6 +33,7 @@
       justify-content: space-between;
       img {
         transition: 0.5s;
+        pointer-events: none;
       }
       &.active {
         img {

@@ -27,5 +27,11 @@
         left: 0;
       }
     }
+    @media (max-width: 490px) {
+      font-size: 11px;
+    }
+  }
+  @media (max-width: 490px) {
+    gap: 15px;
   }
 }
