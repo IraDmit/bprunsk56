@@ -5,6 +5,8 @@ const rename = require("gulp-rename");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser"); // Для минификации JS
 var ghPages = require("gulp-gh-pages");
+const javascriptObfuscator = require("gulp-javascript-obfuscator");
+
 
 const browserSync = require("browser-sync").create();
 
@@ -38,6 +40,14 @@ function scripts() {
     .pipe(browserSync.stream());
 }
 
+function obfuscate() {
+  return gulp
+    .src("./dist/js/*.min.js")
+    .pipe(javascriptObfuscator())
+    .pipe(gulp.dest("./dist/js/obfuscated"))
+    .pipe(browserSync.stream());
+}
+
 // Отслеживание изменений
 function watchFiles() {
   browserSync.init({
@@ -67,6 +77,7 @@ gulp.task("deploy", function () {
   return gulp.src("./dist/**/*").pipe(ghPages());
 });
 
-exports.watch = gulp.series(buildTasks, watchFiles);
-exports.build = buildTasks;
+exports.obfuscate = obfuscate;
+exports.watch = gulp.series(buildTasks, obfuscate, watchFiles);
+exports.build = gulp.series(buildTasks, obfuscate);
 exports.default = exports.watch;
