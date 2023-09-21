@@ -181,6 +181,9 @@
     &__dots {
       display: flex;
       gap: 50px;
+      img{
+        cursor: pointer;
+      }
     }
     @media (max-width: 850px) {
       visibility: hidden;

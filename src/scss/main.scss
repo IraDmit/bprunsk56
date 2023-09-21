@@ -16,6 +16,10 @@
 @import "addressTable";
 @import "infoHouse";
 
+html{
+  scroll-behavior: smooth;
+}
+
 .container {
   padding: 0 30px;
   max-width: 1203px;
